@@ -20,10 +20,6 @@
 \renewcommand\footrulewidth{0.4pt}
 \setlength\parindent{0pt}
 
-
-
-
-
 \newcounter{homeworkProblemCounter}
 
 \newcommand{\homeworkProblemName}{}
@@ -47,14 +43,14 @@
 	\exitProblemHeader{\homeworkProblemName}
 }
 
-\newcommand{\hmwkTitle}{HOMEWORK TITLE HERE}
-\newcommand{\hmwkDueDate}{Today's Date}
-\newcommand{\hmwkClass}{CLASS NAME}
-\newcommand{\hmwkAuthorName}{An Author}
-
-
-
-
+\newenvironment{UhomeworkProblem}[1][Problem \arabic{homeworkProblemCounter}]{
+	\stepcounter{homeworkProblemCounter}
+	\renewcommand{\homeworkProblemName}{#1}
+	\section*{\homeworkProblemName}
+	\enterProblemHeader{\homeworkProblemName}
+}{
+	\exitProblemHeader{\homeworkProblemName}
+}
 
 \title{
 	\vspace{2in}
@@ -62,6 +58,25 @@
 	\normalsize\vspace{0.1in}\small{Due\ on\ \hmwkDueDate}\\
 	\vspace{3in}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newcommand{\hmwkTitle}{Space Invaders Lab Report}
+\newcommand{\hmwkDueDate}{Friday, Fedruary 6th}
+\newcommand{\hmwkClass}{ECE 2049}
+\newcommand{\hmwkAuthorName}{Ted Meyer}
 
 \author{\textbf{\hmwkAuthorName}}
 \date{}
@@ -77,9 +92,9 @@
 
 
 
-\begin{homeworkProblem}
+\begin{UhomeworkProblem}[Introduction]
 	this is the first problem
-\end{homeworkProblem}
+\end{UhomeworkProblem}
 
 \begin{homeworkProblem}
 	this is the second problem
